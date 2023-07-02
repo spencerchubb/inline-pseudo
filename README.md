@@ -11,10 +11,7 @@
 
 inline-pseudo allows you to write pseudo styles directly into your html. Here's an example.
 
-<video controls style="max-width: 600px; margin: 0 auto;">
-    <source src="assets/inline-demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+https://github.com/spencerchubb/inline-pseudo/assets/58525483/609a23d9-442c-42a8-ac91-68b8cab648a9
 
 And here's the code for the above example. Just add a `hover` or `focus` attribute to an html element, and you're good to go!
 
