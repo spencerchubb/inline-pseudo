@@ -1,0 +1,25 @@
+{
+  "name": "inline-pseudo",
+  "version": "0.0.3",
+  "description": "Write pseudo styles directly into your html",
+  "main": "index.js",
+  "files": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencerchubb/inline-pseudo.git"
+  },
+  "keywords": [
+    "CSS",
+    "pseudo-classes",
+    "inline"
+  ],
+  "author": "spencerchubb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spencerchubb/inline-pseudo/issues"
+  },
+  "homepage": "https://github.com/spencerchubb/inline-pseudo#readme"
+}

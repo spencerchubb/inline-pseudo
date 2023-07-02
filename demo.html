@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+
+</html>
+
+<body>
+    <div style="display: flex; flex-direction: column; padding: 32px; gap: 32px;">
+        <button
+            style="background: #00ffb4; padding: 8px; border-radius: 32px; font-weight: bold; transition: ease-in-out 0.3s; border: none;  outline: none;"
+            hover="background: #00b4ff; color: white; cursor: pointer;">
+            Hover me
+        </button>
+        <input
+            type="text"
+            placeholder="Focus me"
+            style="border: 1px solid #888; outline: none; padding: 8px; border-radius: 2px; transition: ease-in-out 0.3s;"
+            focus="border: 1px solid black; box-shadow: 0 0 12px -2px #3944d4; background: #eee;" />
+    </div>
+    <script>
+        // Potential name: inline-pseudo.js, inline-pseudo-styles.js
+
+        function style(selector) {
+            return e => {
+                const el = e.target;
+                if (el.hasAttribute(selector)) {
+                    const current = el.getAttribute('style');
+                    el.setAttribute('oldstyle', current);
+                    el.setAttribute('style', current + el.getAttribute(selector));
+                }
+            }
+        }
+
+        function unstyle(selector) {
+            return e => {
+                const el = e.target;
+                if (el.hasAttribute(selector)) {
+                    const old = el.getAttribute('oldstyle')
+                    el.setAttribute('style', old);
+                }
+            }
+        }
+
+        document.addEventListener('mouseover', style('hover'));
+        document.addEventListener('mouseout', unstyle('hover'));
+        document.addEventListener('focusin', style('focus'));
+        document.addEventListener('focusout', unstyle('focus'));
+    </script>
+</body>
